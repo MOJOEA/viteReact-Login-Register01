@@ -48,7 +48,7 @@ function Login() {
       const response = await axios.get(API_URL)
       const users = response.data
 
-      for (let user of users) {
+      for (const user of users) {
         if (user.password.length !== 64) {
           const newHashedPassword = sha256(user.password)
           await axios.put(`${API_URL}/${user.id}`, {

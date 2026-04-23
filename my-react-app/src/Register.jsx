@@ -18,7 +18,6 @@ function Register() {
   async function handleRegister(e) {
     e.preventDefault()
     
-    // บังคับกรอกข้อมูลทุกอย่างตามที่สั่ง
     if (!fullname || !useremail || !userpassword || !userphone || !usergroup) {
       setErrorMessage('Please fill in all fields')
       return
